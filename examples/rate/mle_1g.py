@@ -41,6 +41,8 @@ import numpy as np
 import tensorflow as tf
 import tensorflow_probability as tfp
 
+from tqdm.keras import TqdmCallback
+
 import psiz
 
 # Uncomment the following line to force eager execution.
@@ -148,7 +150,7 @@ def main():
         # Infer embedding.
         model.compile(**compile_kwargs)
         history = model.fit(
-            ds_obs_train, epochs=epochs, callbacks=callbacks, verbose=0
+            ds_obs_train, epochs=epochs, callbacks=[TqdmCallback(verbose=0)], verbose=0
         )
 
         # train_mse = history.history['mse'][0]

@@ -1,2 +1,2 @@
-model_checkpoint_path: "weights_rho_is_onetenth"
-all_model_checkpoint_paths: "weights_rho_is_onetenth"
+model_checkpoint_path: "weights_rho_is_ten_new"
+all_model_checkpoint_paths: "weights_rho_is_ten_new"
